@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dharamstudios"
-version = "0.2.0"
+version = "0.2.3"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(17)
+    jvmToolchain(11)
 }
 
 java {
@@ -32,7 +32,7 @@ publishing {
             from(components["java"])
             groupId = "com.dharamstudios"
             artifactId = "validation-core"
-            version = "0.2.0"
+            version = "0.2.3"
         }
     }
 }
