@@ -67,6 +67,38 @@ fun FieldScope<String>.onlyDigits(
     }
 }
 
+fun FieldScope<String>.contains(
+    vararg required: String,
+    errorMessage: String? = null
+) {
+    val missing = required.filterNot { value.contains(it) }
+
+    if (missing.isNotEmpty()) {
+        addError(
+            FieldError(
+                fieldName = fieldName,
+                message = errorMessage
+                    ?: "Field $fieldName should contain ${missing.joinToString(", ")}"
+            )
+        )
+    }
+}
+
+fun FieldScope<String>.contains(
+    regex: Regex,
+    errorMessage: String? = null
+) {
+    if (!value.contains(regex)) {
+        addError(
+            FieldError(
+                fieldName = fieldName,
+                message = errorMessage
+                    ?: "Field $fieldName should contain ${regex.pattern}"
+            )
+        )
+    }
+}
+
 fun FieldScope<Int>.minValue(
     atLeast: Int,
     errorMessage: String? = null
