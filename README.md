@@ -34,7 +34,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation("com.github.DharamStudios:validation-core:0.2.0")
+    implementation("com.github.dharamstudios:validation-core:0.2.0")
 }
 ```
 
