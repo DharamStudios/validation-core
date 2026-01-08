@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dharamstudios"
-version = "0.2.4"
+version = "0.2.5"
 
 repositories {
     mavenCentral()
@@ -32,7 +32,7 @@ publishing {
             from(components["java"])
             groupId = "com.dharamstudios"
             artifactId = "validation-core"
-            version = "0.2.4"
+            version = "0.2.5"
         }
     }
 }
