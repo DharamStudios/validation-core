@@ -9,7 +9,7 @@ fun  FieldScope<String>.notBlank(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName is blank",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -25,7 +25,7 @@ fun FieldScope<String>.minLength(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be at least $minLength characters",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -41,7 +41,7 @@ fun FieldScope<String>.maxLength(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be at most $maxLength characters",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -56,7 +56,7 @@ fun FieldScope<String>.onlyLetters(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be only letters",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -71,7 +71,7 @@ fun FieldScope<String>.onlyDigits(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should contain only digits",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -90,7 +90,7 @@ fun FieldScope<String>.contains(
                 fieldName = fieldName,
                 message = errorMessage
                     ?: "Field $fieldName should contain ${missing.joinToString(", ")}",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -107,7 +107,7 @@ fun FieldScope<String>.contains(
                 fieldName = fieldName,
                 message = errorMessage
                     ?: "Field $fieldName should contain ${regex.pattern}",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -123,7 +123,7 @@ fun FieldScope<Int>.minValue(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be at least $atLeast",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -139,7 +139,7 @@ fun FieldScope<Int>.maxValue(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be at most $atMost",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -156,7 +156,7 @@ fun FieldScope<Int>.inRange(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be in between $from and $to",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -171,7 +171,7 @@ fun FieldScope<Int>.positive(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be positive",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -186,7 +186,7 @@ fun FieldScope<Int>.nonPositive(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be non-positive",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
@@ -201,7 +201,7 @@ fun FieldScope<Int>.nonNegative(
             FieldError(
                 fieldName = fieldName,
                 message = errorMessage ?: "Field $fieldName should be non-negative",
-                validationCoreErrorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
+                errorType = validationCoreErrorType ?: DefaultValidationCoreErrorType.NONE
             )
         )
     }
